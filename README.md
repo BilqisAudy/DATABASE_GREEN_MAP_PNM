@@ -41,11 +41,21 @@ Jalankan file SQL secara berurutan dari 01 sampai 04 di phpMyAdmin.
 ![ALTER TABLE query](screenshot/tahap2-alter-1.png)
 ![ALTER TABLE hasil](screenshot/tahap2-alter-hasil.png)
 
+
+
 **UPDATE**
 ![UPDATE query](screenshot/tahap2-update-1.png)
 
+
+
+
+
 **Cek hasil**
 ![Cek hasil](screenshot/tahap2-cek-hasil.png)
+
+
+
+
 
 ### Tahap 3: Pembuktian
 ![Tahap 3](screenshot/tahap3-select.png)
