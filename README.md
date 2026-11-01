@@ -1,4 +1,4 @@
-# Green Map PNM - Basis Data
+# Green Map PNM - Basis Data Kelompok 15
 
 Proyek basis data kelompok untuk Modul 9: Redundansi dan Denormalisasi.
 
