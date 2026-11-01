@@ -1,36 +1,20 @@
--- Post-test no. 1 (2): DDL tabel denormalisasi + query panggilan
+-- Post-test no. 1 (2): DDL atribut turunan + query panggilan
+-- (kolom total_perawatan sudah dibuat pada Tahap 2)
 
--- DDL: tabel denormalisasi
-CREATE TABLE tanaman_denorm (
-  id_tanaman         INT PRIMARY KEY,
-  nama_tanaman       VARCHAR(100),
-  nama_jenis         VARCHAR(100),
-  manfaat            TEXT,
-  kondisi            VARCHAR(50),
-  latitude           DECIMAL(10,7),
-  longitude          DECIMAL(10,7),
-  jumlah_perawatan   INT DEFAULT 0,
-  jumlah_laporan     INT DEFAULT 0,
-  perawatan_terakhir DATE
-);
+-- DDL: tambah dua atribut turunan
+ALTER TABLE tanaman
+  ADD COLUMN jumlah_laporan INT DEFAULT 0,
+  ADD COLUMN perawatan_terakhir DATE;
 
--- Isi dari tabel normal
-INSERT INTO tanaman_denorm
-SELECT
-  t.id_tanaman, t.nama_tanaman, jt.nama_jenis, jt.manfaat,
-  t.kondisi, t.latitude, t.longitude,
-  COUNT(DISTINCT p.id_perawatan),
-  COUNT(DISTINCT lk.id_laporan),
-  MAX(p.tanggal)
-FROM tanaman t
-JOIN jenis_tanaman jt        ON t.id_jenis = jt.id_jenis
-LEFT JOIN perawatan p        ON t.id_tanaman = p.id_tanaman
-LEFT JOIN laporan_kondisi lk ON t.id_tanaman = lk.id_tanaman
-GROUP BY t.id_tanaman, t.nama_tanaman, jt.nama_jenis, jt.manfaat,
-         t.kondisi, t.latitude, t.longitude;
+-- Isi dari tabel asal
+UPDATE tanaman t
+SET t.jumlah_laporan = (
+      SELECT COUNT(*) FROM laporan_kondisi lk WHERE lk.id_tanaman = t.id_tanaman),
+    t.perawatan_terakhir = (
+      SELECT MAX(p.tanggal) FROM perawatan p WHERE p.id_tanaman = t.id_tanaman);
 
--- Query panggilan (tanpa JOIN)
-SELECT nama_tanaman, nama_jenis, jumlah_perawatan, jumlah_laporan, perawatan_terakhir
-FROM tanaman_denorm
+-- Query panggilan (tanpa JOIN dan tanpa agregasi)
+SELECT nama_tanaman, total_perawatan, jumlah_laporan, perawatan_terakhir
+FROM tanaman
 WHERE jumlah_laporan > 0
 ORDER BY jumlah_laporan DESC;
