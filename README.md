@@ -27,35 +27,39 @@ Jalankan file SQL secara berurutan dari 01 sampai 04 di phpMyAdmin.
 ## Bukti Eksekusi
 
 ### Database db_green_map_pnm
-![Database tabel 1](screenshot/database-tabel-1.png)
-![Database tabel 2](screenshot/database-tabel-2.png)
+
+<img src="screenshot/database-tabel-1.png" width="700">
+
+<br>
+
+<img src="screenshot/database-tabel-2.png" width="700">
 
 ### Designer (Relasi Antartabel)
-![Designer](screenshot/database-designer.png)
+
+<img src="screenshot/database-designer.png" width="700">
 
 ### Tahap 1: Query JOIN + COUNT
-![Tahap 1 JOIN](screenshot/tahap1-join.png)
+
+<img src="screenshot/tahap1-join.png" width="700">
 
 ### Tahap 2: Denormalisasi
+
 **ALTER TABLE**
-![ALTER TABLE query](screenshot/tahap2-alter-1.png)
-![ALTER TABLE hasil](screenshot/tahap2-alter-hasil.png)
 
+<img src="screenshot/tahap2-alter-1.png" width="700">
 
+<br>
+
+<img src="screenshot/tahap2-alter-hasil.png" width="700">
 
 **UPDATE**
-![UPDATE query](screenshot/tahap2-update-1.png)
 
-
-
-
+<img src="screenshot/tahap2-update-1.png" width="700">
 
 **Cek hasil**
-![Cek hasil](screenshot/tahap2-cek-hasil.png)
 
-
-
-
+<img src="screenshot/tahap2-cek-hasil.png" width="700">
 
 ### Tahap 3: Pembuktian
-![Tahap 3](screenshot/tahap3-select.png)
+
+<img src="screenshot/tahap3-select.png" width="700">
