@@ -43,7 +43,6 @@ Jalankan file SQL secara berurutan dari 01 sampai 04 di phpMyAdmin.
 
 **UPDATE**
 ![UPDATE query](screenshot/tahap2-update-1.png)
-![UPDATE hasil](screenshot/tahap2-update-hasil.png)
 
 **Cek hasil**
 ![Cek hasil](screenshot/tahap2-cek-hasil.png)
