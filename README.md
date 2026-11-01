@@ -21,3 +21,32 @@ Kelas 1C - Teknologi Rekayasa Perangkat Lunak (TRPL)
 
 ## Urutan Menjalankan
 Jalankan file SQL secara berurutan dari 01 sampai 04 di phpMyAdmin.
+
+---
+
+## Bukti Eksekusi
+
+### Database db_green_map_pnm
+![Database tabel 1](screenshot/database-tabel-1.png)
+![Database tabel 2](screenshot/database-tabel-2.png)
+
+### Designer (Relasi Antartabel)
+![Designer](screenshot/database-designer.png)
+
+### Tahap 1: Query JOIN + COUNT
+![Tahap 1 JOIN](screenshot/tahap1-join.png)
+
+### Tahap 2: Denormalisasi
+**ALTER TABLE**
+![ALTER TABLE query](screenshot/tahap2-alter-1.png)
+![ALTER TABLE hasil](screenshot/tahap2-alter-hasil.png)
+
+**UPDATE**
+![UPDATE query](screenshot/tahap2-update-1.png)
+![UPDATE hasil](screenshot/tahap2-update-hasil.png)
+
+**Cek hasil**
+![Cek hasil](screenshot/tahap2-cek-hasil.png)
+
+### Tahap 3: Pembuktian
+![Tahap 3](screenshot/tahap3-select.png)
