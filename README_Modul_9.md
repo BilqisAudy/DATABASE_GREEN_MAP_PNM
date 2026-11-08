@@ -79,11 +79,11 @@ Jalankan file SQL secara berurutan dari 01 sampai 04 di phpMyAdmin.
 
 **Script 1: Query JOIN kompleks**
 
-<img src="screenshot/posttest1-join-kode.png" width="700">
+<img src="screenshot/posttestt1-join-kode.png" width="700">
 
 <br>
 
-<img src="screenshot/posttest1-join-hasil.png" width="700">
+<img src="screenshot/posttestt1-join-hasil.png" width="700">
 
 **Script 2: DDL denormalisasi + query panggilan**
 
