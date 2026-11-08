@@ -1,7 +1,3 @@
--- Script 2: DDL denormalisasi
-ALTER TABLE tanaman
-ADD COLUMN total_laporan INT DEFAULT 0;
-
 -- Mengisi atribut turunan dari hasil perhitungan Tahap 1
 UPDATE tanaman t
 SET t.total_laporan = (
