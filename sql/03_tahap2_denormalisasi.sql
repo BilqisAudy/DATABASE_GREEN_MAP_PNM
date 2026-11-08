@@ -1,11 +1,14 @@
--- Tahap 2: Denormalisasi (atribut turunan jumlah_laporan)
-USE db_green_map_pnm;
+-- 1. Tambah kolom turunan
+ALTER TABLE tanaman
+ADD COLUMN total_laporan INT DEFAULT 0;
 
-ALTER TABLE tanaman ADD COLUMN jumlah_laporan INT DEFAULT 0;
-
+-- 2. Isi kolom dari hasil perhitungan Tahap 1
 UPDATE tanaman t
-SET jumlah_laporan = (
-  SELECT COUNT(*) FROM laporan_kondisi l WHERE l.id_tanaman = t.id_tanaman
+SET t.total_laporan = (
+  SELECT COUNT(*)
+  FROM laporan_kondisi l
+  WHERE l.id_tanaman = t.id_tanaman
 );
 
-SELECT * FROM tanaman;
+-- 3. Verifikasi
+SELECT id_tanaman, nama_tanaman, total_laporan FROM tanaman;
