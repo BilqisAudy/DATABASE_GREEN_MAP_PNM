@@ -20,7 +20,7 @@ Kelas 1C - Teknologi Rekayasa Perangkat Lunak (TRPL)
 | [04_tahap3_query_tanpa_JOIN_dan_agregasi.sql](sql/04_tahap3_query_tanpa_JOIN_dan_agregasi.sql) | Tahap 3: Query tanpa JOIN dan agregasi |
 | [05_tahap3_membandingkan_dengan_query.sql](sql/05_tahap3_membandingkan_dengan_query.sql) | Tahap 4: Membandingkan dengan Query |
 | [06_posttest_join_kompleks.sql](sql/05_posttest_join_kompleks.sql) | Post-test: Query JOIN kompleks |
-| [07_posttest_denormalisasi.sql](sql/06_posttest_denormalisasi.sql) | Post-test: DDL denormalisasi + query panggilan |
+| [07_posttest_denormalisasi_dan_query_panggilannya.sql](sql/07_posttest_denormalisasi_dan_query_panggilannya.sql) | Post-test: DDL denormalisasi + query panggilan |
 
 ## Urutan Menjalankan
 Jalankan file SQL secara berurutan dari 01 sampai 04 di phpMyAdmin.
