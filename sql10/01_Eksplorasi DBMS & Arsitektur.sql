@@ -9,3 +9,6 @@ SHOW DATABASES;
 
 -- 2. Identifikasi storage engine pada tabel proyek
 SHOW TABLE STATUS FROM db_green_map_pnm;
+
+-- 3. Verifikasi jumlah data tabel perawatan
+SELECT COUNT(*) FROM db_green_map_pnm.perawatan;
