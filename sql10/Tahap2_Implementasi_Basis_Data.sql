@@ -53,4 +53,15 @@ CREATE TABLE laporan_kondisi (
   FOREIGN KEY (id_pengguna) REFERENCES pengguna(id_pengguna)
 );
 
+-- 6. Memeriksa Relasi Tabel
+SELECT TABLE_NAME AS tabel_anak,
+       COLUMN_NAME AS foreign_key,
+       REFERENCED_TABLE_NAME AS tabel_induk,
+       REFERENCED_COLUMN_NAME AS primary_key
+FROM information_schema.KEY_COLUMN_USAGE
+WHERE TABLE_SCHEMA = 'db_green_map_pnm'
+  AND REFERENCED_TABLE_NAME IS NOT NULL;
+ 
+SHOW CREATE TABLE perawatan;
 
+-- 7. Mengisi Data Awal
