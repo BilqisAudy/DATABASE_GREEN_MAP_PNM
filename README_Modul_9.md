@@ -43,7 +43,7 @@ Jalankan file SQL secara berurutan dari 01 sampai 04 di phpMyAdmin.
 
 ### Tahap 1: Query JOIN + COUNT
 
-<img src="screenshot/tahap1-join.png" width="700">
+<img src="screenshot/tahapp1-join.png" width="700">
 
 ### Tahap 2: Denormalisasi
 
