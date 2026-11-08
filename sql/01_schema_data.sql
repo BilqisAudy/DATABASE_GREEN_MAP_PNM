@@ -4,12 +4,6 @@
 CREATE DATABASE IF NOT EXISTS db_green_map_pnm;
 USE db_green_map_pnm;
 
-CREATE TABLE jenis_tanaman (
-  id_jenis INT AUTO_INCREMENT PRIMARY KEY,
-  nama_jenis VARCHAR(100) NOT NULL,
-  manfaat TEXT
-);
-
 CREATE TABLE pengguna (
   id_pengguna INT AUTO_INCREMENT PRIMARY KEY,
   nama VARCHAR(100) NOT NULL,
@@ -18,14 +12,13 @@ CREATE TABLE pengguna (
 
 CREATE TABLE tanaman (
   id_tanaman INT AUTO_INCREMENT PRIMARY KEY,
-  id_jenis INT NOT NULL,
+  jenis_tanaman INT NOT NULL,
   nama_tanaman VARCHAR(100) NOT NULL,
   kondisi VARCHAR(50),
   foto VARCHAR(255),
   latitude DECIMAL(10,7),
   longitude DECIMAL(10,7),
-  FOREIGN KEY (id_jenis) REFERENCES jenis_tanaman(id_jenis)
-);
+ 
 
 CREATE TABLE perawatan (
   id_perawatan INT AUTO_INCREMENT PRIMARY KEY,
@@ -50,19 +43,14 @@ CREATE TABLE laporan_kondisi (
   FOREIGN KEY (id_pengguna) REFERENCES pengguna(id_pengguna)
 );
 
-INSERT INTO jenis_tanaman (nama_jenis, manfaat) VALUES
-('Pohon Peneduh','Memberi keteduhan dan menyerap CO2'),
-('Tanaman Hias','Estetika taman'),
-('Tanaman Obat','Bahan obat tradisional');
-
 INSERT INTO pengguna (nama, peran) VALUES
 ('Bilqis','Mahasiswa'),('Cindika','Mahasiswa'),('Yaya','Mahasiswa'),('Pak Very','Pengelola');
 
-INSERT INTO tanaman (id_jenis, nama_tanaman, kondisi, latitude, longitude) VALUES
-(1,'Trembesi','Terawat',-7.6298,111.5239),
-(1,'Mahoni','Terawat',-7.6299,111.5240),
-(2,'Bougainvillea','Perlu perawatan',-7.6300,111.5241),
-(3,'Jahe','Terawat',-7.6301,111.5242);
+INSERT INTO tanaman (nama_tanaman, kondisi, latitude, longitude) VALUES
+('Trembesi','Terawat',-7.6298,111.5239),
+('Mahoni','Terawat',-7.6299,111.5240),
+('Bougainvillea','Perlu perawatan',-7.6300,111.5241),
+('Jahe','Terawat',-7.6301,111.5242);
 
 INSERT INTO perawatan (id_tanaman,id_pengguna,tanggal,tindakan,catatan) VALUES
 (1,4,'2026-10-01','Penyiraman','Rutin'),
