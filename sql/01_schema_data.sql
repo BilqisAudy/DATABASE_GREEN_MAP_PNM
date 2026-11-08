@@ -1,7 +1,8 @@
 -- 01: Pembuatan database, tabel, dan data contoh
 -- Proyek: Green Map PNM
 
-CREATE DATABASE IF NOT EXISTS db_green_map_pnm;
+DROP DATABASE IF EXISTS db_green_map_pnm;
+CREATE DATABASE db_green_map_pnm;
 USE db_green_map_pnm;
 
 CREATE TABLE pengguna (
@@ -12,8 +13,10 @@ CREATE TABLE pengguna (
 
 CREATE TABLE tanaman (
   id_tanaman INT AUTO_INCREMENT PRIMARY KEY,
-  jenis_tanaman VARCHAR(50) NOT NULL,
   nama_tanaman VARCHAR(100) NOT NULL,
+  jenis_tanaman VARCHAR(50) NOT NULL,
+  manfaat TEXT,
+  cara_perawatan TEXT,
   kondisi VARCHAR(50),
   foto VARCHAR(255),
   latitude DECIMAL(10,7),
@@ -49,11 +52,12 @@ INSERT INTO pengguna (nama, peran) VALUES
 ('Yaya','Mahasiswa'),
 ('Pak Very','Pengelola');
 
-INSERT INTO tanaman (jenis_tanaman, nama_tanaman, kondisi, latitude, longitude) VALUES
-('Pohon','Trembesi','Terawat',-7.6298,111.5239),
-('Pohon','Mahoni','Terawat',-7.6299,111.5240),
-('Tanaman Hias','Bougainvillea','Perlu perawatan',-7.6300,111.5241),
-('Tanaman Obat','Jahe','Terawat',-7.6301,111.5242);
+INSERT INTO tanaman
+(nama_tanaman, jenis_tanaman, manfaat, cara_perawatan, kondisi, latitude, longitude) VALUES
+('Trembesi','Pohon','Memberi keteduhan dan menyerap CO2','Siram 2x seminggu, pangkas cabang kering','Terawat',-7.6298,111.5239),
+('Mahoni','Pohon','Memberi keteduhan dan menyerap CO2','Siram 2x seminggu, pangkas cabang kering','Terawat',-7.6299,111.5240),
+('Bougainvillea','Tanaman Hias','Estetika taman','Siram tiap hari, beri pupuk sebulan sekali','Perlu perawatan',-7.6300,111.5241),
+('Jahe','Tanaman Obat','Bahan obat tradisional','Siram 1x sehari, tanah gembur','Terawat',-7.6301,111.5242);
 
 INSERT INTO perawatan (id_tanaman, id_pengguna, tanggal, tindakan, catatan) VALUES
 (1,4,'2026-10-01','Penyiraman','Rutin'),
