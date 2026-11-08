@@ -49,7 +49,7 @@ Jalankan file SQL secara berurutan dari 01 sampai 04 di phpMyAdmin.
 
 **ALTER TABLE**
 
-<img src="screenshot/tahap2-alter-1.png" width="700">
+<img src="screenshot/tahapp2-alter-1.png" width="700">
 
 <br>
 
