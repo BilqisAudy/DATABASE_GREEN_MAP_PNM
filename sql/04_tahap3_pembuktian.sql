@@ -1,4 +1,6 @@
 -- Tahap 3: Pembuktian (tanpa JOIN dan tanpa agregasi)
--- Database: db_green_map_pnm
-SELECT id_tanaman, nama_tanaman, total_perawatan
-FROM tanaman;
+USE db_green_map_pnm;
+
+SELECT id_tanaman, nama_tanaman, jumlah_laporan
+FROM tanaman
+ORDER BY jumlah_laporan DESC;
