@@ -12,13 +12,13 @@ CREATE TABLE pengguna (
 
 CREATE TABLE tanaman (
   id_tanaman INT AUTO_INCREMENT PRIMARY KEY,
-  jenis_tanaman INT NOT NULL,
+  jenis_tanaman VARCHAR(50) NOT NULL,
   nama_tanaman VARCHAR(100) NOT NULL,
   kondisi VARCHAR(50),
   foto VARCHAR(255),
   latitude DECIMAL(10,7),
-  longitude DECIMAL(10,7),
- 
+  longitude DECIMAL(10,7)
+);
 
 CREATE TABLE perawatan (
   id_perawatan INT AUTO_INCREMENT PRIMARY KEY,
@@ -44,21 +44,24 @@ CREATE TABLE laporan_kondisi (
 );
 
 INSERT INTO pengguna (nama, peran) VALUES
-('Bilqis','Mahasiswa'),('Cindika','Mahasiswa'),('Yaya','Mahasiswa'),('Pak Very','Pengelola');
+('Bilqis','Mahasiswa'),
+('Cindika','Mahasiswa'),
+('Yaya','Mahasiswa'),
+('Pak Very','Pengelola');
 
-INSERT INTO tanaman (nama_tanaman, kondisi, latitude, longitude) VALUES
-('Trembesi','Terawat',-7.6298,111.5239),
-('Mahoni','Terawat',-7.6299,111.5240),
-('Bougainvillea','Perlu perawatan',-7.6300,111.5241),
-('Jahe','Terawat',-7.6301,111.5242);
+INSERT INTO tanaman (jenis_tanaman, nama_tanaman, kondisi, latitude, longitude) VALUES
+('Pohon','Trembesi','Terawat',-7.6298,111.5239),
+('Pohon','Mahoni','Terawat',-7.6299,111.5240),
+('Tanaman Hias','Bougainvillea','Perlu perawatan',-7.6300,111.5241),
+('Tanaman Obat','Jahe','Terawat',-7.6301,111.5242);
 
-INSERT INTO perawatan (id_tanaman,id_pengguna,tanggal,tindakan,catatan) VALUES
+INSERT INTO perawatan (id_tanaman, id_pengguna, tanggal, tindakan, catatan) VALUES
 (1,4,'2026-10-01','Penyiraman','Rutin'),
 (1,4,'2026-10-15','Pemangkasan','Cabang kering'),
 (3,4,'2026-10-20','Pemupukan','Pupuk NPK'),
 (2,4,'2026-10-22','Penyiraman','Rutin');
 
-INSERT INTO laporan_kondisi (id_tanaman,id_pengguna,tanggal_lapor,deskripsi,status) VALUES
+INSERT INTO laporan_kondisi (id_tanaman, id_pengguna, tanggal_lapor, deskripsi, status) VALUES
 (3,1,'2026-10-18','Daun layu','diproses'),
 (3,2,'2026-10-19','Daun menguning','diterima'),
 (1,3,'2026-10-25','Cabang patah','selesai');
