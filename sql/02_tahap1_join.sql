@@ -1,4 +1,3 @@
--- Jumlah laporan kondisi per tanaman (JOIN 2 tabel + agregasi COUNT)
 SELECT
   t.id_tanaman,
   t.nama_tanaman,
