@@ -65,7 +65,7 @@ Jalankan file SQL secara berurutan dari 01 sampai 04 di phpMyAdmin.
 
 ### Tahap 3: Pembuktian
 
-<img src="screenshot/tahap3-select.png" width="700">
+<img src="screenshot/tahapp3-select.png" width="700">
 
 ### Post-Test No. 1
 
