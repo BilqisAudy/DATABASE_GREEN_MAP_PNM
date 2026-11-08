@@ -1,13 +1,14 @@
 --1.	Pengujian Query Sebelum Index
-   EXPLAIN
-   SELECT
-       id_perawatan,
-       id_pengguna,
-       tanggal,
-       tindakan
-   FROM perawatan
-   WHERE tanggal >= '2026-01-01'
-     AND tanggal < '2026-12-01';
+EXPLAIN
+SELECT
+   id_perawatan,
+   id_pengguna,
+   tanggal,
+   tindakan
+FROM perawatan
+WHERE tanggal >= '2026-01-01'
+AND tanggal < '2026-12-01';
+
 
 --2.	Membuat Index
 USE db_green_map_pnm;
