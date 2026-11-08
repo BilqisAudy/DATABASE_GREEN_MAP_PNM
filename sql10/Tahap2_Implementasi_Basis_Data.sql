@@ -65,3 +65,37 @@ WHERE TABLE_SCHEMA = 'db_green_map_pnm'
 SHOW CREATE TABLE perawatan;
 
 -- 7. Mengisi Data Awal
+INSERT INTO pengguna (nama, peran) VALUES
+('Bilqis','Mahasiswa'),
+('Cindika','Mahasiswa'),
+('Yaya','Mahasiswa'),
+('Pak Very','Pengelola');
+ 
+INSERT INTO tanaman
+(nama_tanaman, jenis_tanaman, manfaat, cara_perawatan, kondisi, latitude, longitude) VALUES
+('Trembesi','Pohon','Memberi keteduhan dan menyerap CO2','Siram 2x seminggu, pangkas cabang kering','Terawat',-7.6298,111.5239),
+('Mahoni','Pohon','Memberi keteduhan dan menyerap CO2','Siram 2x seminggu, pangkas cabang kering','Terawat',-7.6299,111.5240),
+('Bougainvillea','Tanaman Hias','Estetika taman','Siram tiap hari, beri pupuk sebulan sekali','Perlu perawatan',-7.6300,111.5241),
+('Jahe','Tanaman Obat','Bahan obat tradisional','Siram 1x sehari, tanah gembur','Terawat',-7.6301,111.5242);
+ 
+INSERT INTO perawatan (id_tanaman, id_pengguna, tanggal, tindakan, catatan) VALUES
+(1,4,'2026-10-01','Penyiraman','Rutin'),
+(1,4,'2026-10-15','Pemangkasan','Cabang kering'),
+(3,4,'2026-10-20','Pemupukan','Pupuk NPK'),
+(2,4,'2026-10-22','Penyiraman','Rutin');
+ 
+INSERT INTO laporan_kondisi (id_tanaman, id_pengguna, tanggal_lapor, deskripsi, status) VALUES
+(3,1,'2026-10-18','Daun layu','diproses'),
+(3,2,'2026-10-19','Daun menguning','diterima'),
+(1,3,'2026-10-25','Cabang patah','selesai');
+
+-- Jumlah tabel diatas dapat diperiksa menggunakan query
+SELECT 'pengguna' AS tabel, COUNT(*) AS jumlah FROM pengguna
+UNION ALL
+SELECT 'tanaman', COUNT(*) FROM tanaman
+UNION ALL
+SELECT 'perawatan', COUNT(*) FROM perawatan
+UNION ALL
+SELECT 'laporan_kondisi', COUNT(*) FROM laporan_kondisi;
+
+
