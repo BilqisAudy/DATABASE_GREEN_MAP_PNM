@@ -33,7 +33,7 @@ WHERE id_tanaman = 3;
 SELECT * FROM `laporan_kondisi` WHERE 1
 
 	
-5. Menguji Integritas Referensial
+-- 5. Menguji Integritas Referensial
 INSERT INTO perawatan
     (id_tanaman, id_pengguna, tanggal, tindakan, catatan)
 VALUES
