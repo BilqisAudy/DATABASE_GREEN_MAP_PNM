@@ -3,18 +3,18 @@
 
 -- DDL: tambah dua atribut turunan
 ALTER TABLE tanaman
-  ADD COLUMN jumlah_laporan INT DEFAULT 0,
+  ADD COLUMN total_laporan INT DEFAULT 0,
   ADD COLUMN perawatan_terakhir DATE;
 
 -- Isi dari tabel asal
 UPDATE tanaman t
-SET t.jumlah_laporan = (
+SET t.total_laporan = (
       SELECT COUNT(*) FROM laporan_kondisi lk WHERE lk.id_tanaman = t.id_tanaman),
     t.perawatan_terakhir = (
       SELECT MAX(p.tanggal) FROM perawatan p WHERE p.id_tanaman = t.id_tanaman);
 
 -- Query panggilan (tanpa JOIN dan tanpa agregasi)
-SELECT nama_tanaman, total_perawatan, jumlah_laporan, perawatan_terakhir
+SELECT nama_tanaman, total_perawatan, total_laporan, perawatan_terakhir
 FROM tanaman
-WHERE jumlah_laporan > 0
-ORDER BY jumlah_laporan DESC;
+WHERE total_laporan > 0
+ORDER BY total_laporan DESC;
