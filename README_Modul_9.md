@@ -87,8 +87,8 @@ Jalankan file SQL secara berurutan dari 01 sampai 04 di phpMyAdmin.
 
 **Script 2: DDL denormalisasi + query panggilan**
 
-<img src="screenshot/posttest1-denorm-kode.png" width="700">
+<img src="screenshot/posttestt1-denorm-kode.png" width="700">
 
 <br>
 
-<img src="screenshot/posttest1-denorm-hasil.png" width="700">
+<img src="screenshot/posttestt1-denorm-hasil.png" width="700">
