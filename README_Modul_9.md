@@ -57,11 +57,11 @@ Jalankan file SQL secara berurutan dari 01 sampai 04 di phpMyAdmin.
 
 **UPDATE**
 
-<img src="screenshot/tahap2-update-1.png" width="700">
+<img src="screenshot/tahapp2-update-1.png" width="700">
 
 **Cek hasil**
 
-<img src="screenshot/tahap2-cek-hasil.png" width="700">
+<img src="screenshot/tahapp2-cek-hasil.png" width="700">
 
 ### Tahap 3: Pembuktian
 
