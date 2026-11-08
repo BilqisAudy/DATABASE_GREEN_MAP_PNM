@@ -17,7 +17,7 @@ Kelas 1C - Teknologi Rekayasa Perangkat Lunak (TRPL)
 | [01_schema_data.sql](sql/01_schema_data.sql) | Pembuatan database, tabel, dan data contoh |
 | [02_tahap1_join.sql](sql/02_tahap1_join.sql) | Tahap 1: Query JOIN + COUNT |
 | [03_tahap2_denormalisasi.sql](sql/03_tahap2_denormalisasi.sql) | Tahap 2: Denormalisasi (kolom total_perawatan) |
-| [04_tahap3_pembuktian.sql](sql/04_tahap3_query_tanpa_JOIN_dan_agregasi.sql) | Tahap 3: Query tanpa JOIN dan agregasi |
+| [04_tahap3_query_tanpa_JOIN_dan_agregasi.sql](sql/04_tahap3_query_tanpa_JOIN_dan_agregasi.sql) | Tahap 3: Query tanpa JOIN dan agregasi |
 | [05_posttest_join_kompleks.sql](sql/05_posttest_join_kompleks.sql) | Post-test: Query JOIN kompleks |
 | [06_posttest_denormalisasi.sql](sql/06_posttest_denormalisasi.sql) | Post-test: DDL denormalisasi + query panggilan |
 
