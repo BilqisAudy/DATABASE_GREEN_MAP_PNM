@@ -1,4 +1,7 @@
--- 1. Identifikasi versi DBMS
+-- Modul 10 - Tahap 1: Eksplorasi DBMS dan Arsitektur Sistem
+-- Proyek: Green Map PNM
+
+-- 1. Identifikasi versi, vendor, storage engine, dan daftar database
 SELECT VERSION();
 SELECT @@version_comment;
 SHOW ENGINES;
