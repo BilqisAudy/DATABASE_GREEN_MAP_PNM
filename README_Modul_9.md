@@ -67,6 +67,14 @@ Jalankan file SQL secara berurutan dari 01 sampai 04 di phpMyAdmin.
 
 <img src="screenshot/tahapp3-select.png" width="700">
 
+<br>
+
+<img src="screenshot/tahapp3-explain-1.png" width="700">
+
+<br>
+
+<img src="screenshot/tahapp3-explain-2.png" width="700">
+
 ### Post-Test No. 1
 
 **Script 1: Query JOIN kompleks**
