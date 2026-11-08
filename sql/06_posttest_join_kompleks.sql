@@ -1,15 +1,14 @@
--- Post-test no. 1 (1): Query JOIN kompleks
--- 3 JOIN + COUNT(DISTINCT) + MAX + GROUP BY
+-- Script 1: JOIN 4 tabel + agregasi (jumlah laporan, jumlah perawatan, laporan belum selesai)
 SELECT
   t.id_tanaman,
   t.nama_tanaman,
-  jt.nama_jenis,
+  t.jenis_tanaman,
+  COUNT(DISTINCT l.id_laporan)  AS jumlah_laporan,
   COUNT(DISTINCT p.id_perawatan) AS jumlah_perawatan,
-  COUNT(DISTINCT lk.id_laporan)  AS jumlah_laporan,
-  MAX(p.tanggal)                 AS perawatan_terakhir
+  COUNT(DISTINCT CASE WHEN l.status <> 'selesai' THEN l.id_laporan END) AS laporan_belum_selesai,
+  MAX(p.tanggal) AS perawatan_terakhir
 FROM tanaman t
-JOIN jenis_tanaman jt        ON t.id_jenis = jt.id_jenis
-LEFT JOIN perawatan p        ON t.id_tanaman = p.id_tanaman
-LEFT JOIN laporan_kondisi lk ON t.id_tanaman = lk.id_tanaman
-GROUP BY t.id_tanaman, t.nama_tanaman, jt.nama_jenis
+LEFT JOIN laporan_kondisi l ON t.id_tanaman = l.id_tanaman
+LEFT JOIN perawatan p       ON t.id_tanaman = p.id_tanaman
+GROUP BY t.id_tanaman, t.nama_tanaman, t.jenis_tanaman
 ORDER BY jumlah_laporan DESC;
