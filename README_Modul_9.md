@@ -53,7 +53,7 @@ Jalankan file SQL secara berurutan dari 01 sampai 04 di phpMyAdmin.
 
 <br>
 
-<img src="screenshot/tahap2-alter-hasil.png" width="700">
+<img src="screenshot/tahapp2-alter-hasil.png" width="700">
 
 **UPDATE**
 
