@@ -31,15 +31,15 @@ Jalankan file SQL secara berurutan dari 01 sampai 04 di phpMyAdmin.
 
 ### Database db_green_map_pnm
 
-<img src="screenshot/database-tabel-1.png" width="700">
+<img src="screenshot/database-tabell-1.png" width="700">
 
 <br>
 
-<img src="screenshot/database-tabel-2.png" width="700">
+<img src="screenshot/database-tabell-2.png" width="700">
 
 ### Designer (Relasi Antartabel)
 
-<img src="screenshot/database-designer.png" width="700">
+<img src="screenshot/database-designerr.png" width="700">
 
 ### Tahap 1: Query JOIN + COUNT
 
