@@ -8,3 +8,4 @@ SET jumlah_laporan = (
   SELECT COUNT(*) FROM laporan_kondisi l WHERE l.id_tanaman = t.id_tanaman
 );
 
+SELECT * FROM tanaman;
