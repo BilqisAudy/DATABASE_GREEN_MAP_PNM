@@ -14,13 +14,13 @@ Kelas 1C - Teknologi Rekayasa Perangkat Lunak (TRPL)
 ## Isi Repository
 | File | Keterangan |
 |---|---|
-| [01_schema_data.sql](sql/01_schema_data.sql) | Pembuatan database, tabel, dan data contoh |
-| [02_tahap1_join.sql](sql/02_tahap1_join.sql) | Tahap 1: Query JOIN + COUNT |
-| [03_tahap2_denormalisasi.sql](sql/03_tahap2_denormalisasi.sql) | Tahap 2: Denormalisasi (kolom total_perawatan) |
-| [04_tahap3_query_tanpa_JOIN_dan_agregasi.sql](sql/04_tahap3_query_tanpa_JOIN_dan_agregasi.sql) | Tahap 3: Query tanpa JOIN dan agregasi |
-| [05_tahap3_membandingkan_dengan_query.sql](sql/05_tahap3_membandingkan_dengan_query.sql) | Tahap 4: Membandingkan dengan Query |
-| [06_posttest_join_kompleks.sql](sql/05_posttest_join_kompleks.sql) | Post-test: Query JOIN kompleks |
-| [07_posttest_denormalisasi_dan_query_panggilannya.sql](sql/07_posttest_denormalisasi_dan_query_panggilannya.sql) | Post-test: DDL denormalisasi + query panggilan |
+| [01_schema_data.sql](sql09/01_schema_data.sql) | Pembuatan database, tabel, dan data contoh |
+| [02_tahap1_join.sql](sql09/02_tahap1_join.sql) | Tahap 1: Query JOIN + COUNT |
+| [03_tahap2_denormalisasi.sql](sql09/03_tahap2_denormalisasi.sql) | Tahap 2: Denormalisasi (kolom total_perawatan) |
+| [04_tahap3_query_tanpa_JOIN_dan_agregasi.sql](sql09/04_tahap3_query_tanpa_JOIN_dan_agregasi.sql) | Tahap 3: Query tanpa JOIN dan agregasi |
+| [05_tahap3_membandingkan_dengan_query.sql](sql09/05_tahap3_membandingkan_dengan_query.sql) | Tahap 4: Membandingkan dengan Query |
+| [06_posttest_join_kompleks.sql](sql09/05_posttest_join_kompleks.sql) | Post-test: Query JOIN kompleks |
+| [07_posttest_denormalisasi_dan_query_panggilannya.sql](sql09/07_posttest_denormalisasi_dan_query_panggilannya.sql) | Post-test: DDL denormalisasi + query panggilan |
 
 ## Urutan Menjalankan
 Jalankan file SQL secara berurutan dari 01 sampai 04 di phpMyAdmin.
