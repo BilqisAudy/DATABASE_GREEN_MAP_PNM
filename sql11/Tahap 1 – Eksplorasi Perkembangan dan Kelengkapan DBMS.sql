@@ -70,3 +70,14 @@ CREATE USER 'pengguna_baca'@'localhost' IDENTIFIED BY 'Baca#2026';
 GRANT SELECT ON db_green_map_pnm.* TO 'pengguna_baca'@'localhost';
 -- Melihat hak akses pengguna
 SHOW GRANTS FOR 'pengguna_baca'@'localhost';
+
+-- 5. Stored function dan log biner
+-- Membuat fungsi penghitung laporan per tanaman
+CREATE FUNCTION fn_jumlah_laporan(p_id INT) RETURNS INT
+READS SQL DATA
+RETURN (SELECT COUNT(*) FROM laporan_kondisi WHERE id_tanaman = p_id);
+ 
+-- Memanggil fungsi untuk tanaman dengan id 3 (Bougainvillea)
+SELECT fn_jumlah_laporan(3) AS jumlah_laporan;
+-- Memeriksa log biner
+SHOW VARIABLES LIKE 'log_bin';
