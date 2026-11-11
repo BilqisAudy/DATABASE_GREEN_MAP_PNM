@@ -28,3 +28,27 @@ SELECT NOW();
  
 -- Memeriksa database aktif
 SELECT DATABASE();
+
+-- 2. Fitur JSON
+-- Memeriksa dukungan fungsi JSON
+SELECT
+    JSON_VALID('{"nama":"Budi"}') AS json_valid,
+    JSON_EXTRACT(
+        '{"nama":"Budi"}',
+        '$.nama'
+    ) AS nama;
+ 
+-- Membuat tabel percobaan dengan kolom JSON
+CREATE TABLE tanaman_json (
+  id_tanaman INT PRIMARY KEY,
+  atribut JSON
+);
+ 
+-- Mengisi data atribut tanaman dalam format JSON
+INSERT INTO tanaman_json VALUES
+(1, '{"nama":"Trembesi","jenis":"Pohon","lokasi":{"lat":-7.6298,"lng":111.5239}}');
+ 
+-- Mengambil nilai nama dan latitude dari JSON
+SELECT JSON_EXTRACT(atribut,'$.nama') AS nama,
+       JSON_EXTRACT(atribut,'$.lokasi.lat') AS latitude
+FROM tanaman_json;
