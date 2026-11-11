@@ -62,4 +62,11 @@ SELECT id_tanaman, nama_tanaman, kondisi FROM tanaman WHERE id_tanaman = 3;
 -- Membatalkan perubahan
 ROLLBACK;
 SELECT id_tanaman, nama_tanaman, kondisi FROM tanaman WHERE id_tanaman = 3;
- 
+
+-- 4. Hak akses pengguna
+-- Membuat pengguna baru
+CREATE USER 'pengguna_baca'@'localhost' IDENTIFIED BY 'Baca#2026';
+-- Memberi hak baca saja
+GRANT SELECT ON db_green_map_pnm.* TO 'pengguna_baca'@'localhost';
+-- Melihat hak akses pengguna
+SHOW GRANTS FOR 'pengguna_baca'@'localhost';
