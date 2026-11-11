@@ -52,3 +52,14 @@ INSERT INTO tanaman_json VALUES
 SELECT JSON_EXTRACT(atribut,'$.nama') AS nama,
        JSON_EXTRACT(atribut,'$.lokasi.lat') AS latitude
 FROM tanaman_json;
+
+-- 3. Fasilitas transaksi (data dibatalkan dengan ROLLBACK)
+-- Memulai transaksi
+START TRANSACTION;
+-- Mengubah kondisi tanaman sementara
+UPDATE tanaman SET kondisi = 'Sehat' WHERE id_tanaman = 3;
+SELECT id_tanaman, nama_tanaman, kondisi FROM tanaman WHERE id_tanaman = 3;
+-- Membatalkan perubahan
+ROLLBACK;
+SELECT id_tanaman, nama_tanaman, kondisi FROM tanaman WHERE id_tanaman = 3;
+ 
