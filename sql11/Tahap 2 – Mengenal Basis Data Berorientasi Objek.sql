@@ -64,3 +64,15 @@ SELECT id_tanaman, nama_tanaman,
 FROM db_katalog_tanaman.katalog_tanaman
 WHERE id_tanaman = 3;
 
+-- 6. Perubahan atribut JSON: menghapus atribut (JSON_REMOVE)
+UPDATE db_katalog_tanaman.katalog_tanaman
+SET detail = JSON_REMOVE(detail, '$.terakhir_disiram')
+WHERE id_tanaman = 3;
+ 
+SELECT id_tanaman, nama_tanaman,
+       detail->>'$.kondisi'          AS kondisi,
+       detail->>'$.terakhir_disiram' AS terakhir_disiram,
+       JSON_CONTAINS_PATH(detail, 'one', '$.terakhir_disiram') AS ada_atribut
+FROM db_katalog_tanaman.katalog_tanaman
+WHERE id_tanaman = 3;
+
