@@ -12,3 +12,16 @@ CREATE TABLE katalog_tanaman (
 ) ENGINE=InnoDB;
  
 DESCRIBE db_katalog_tanaman.katalog_tanaman;
+
+-- 2. Penyimpanan data JSON
+INSERT INTO katalog_tanaman (id_tanaman, nama_tanaman, jenis_tanaman, detail) VALUES
+(1, 'Trembesi', 'Pohon',
+ '{"kondisi": "Terawat", "manfaat": ["Memberi keteduhan", "Menyerap CO2"], "cara_perawatan": "Siram 2x seminggu, pangkas cabang kering", "lokasi": {"lat": -7.6298, "lng": 111.5239}, "tinggi_m": 15}'),
+(2, 'Mahoni', 'Pohon',
+ '{"kondisi": "Terawat", "manfaat": ["Memberi keteduhan", "Menyerap CO2"], "cara_perawatan": "Siram 2x seminggu, pangkas cabang kering", "lokasi": {"lat": -7.6299, "lng": 111.5240}, "tinggi_m": 20}'),
+(3, 'Bougainvillea', 'Tanaman Hias',
+ '{"kondisi": "Perlu perawatan", "manfaat": ["Estetika taman"], "cara_perawatan": "Siram tiap hari, beri pupuk sebulan sekali", "lokasi": {"lat": -7.6300, "lng": 111.5241}, "warna_bunga": ["Ungu", "Merah muda"]}'),
+(4, 'Jahe', 'Tanaman Obat',
+ '{"kondisi": "Terawat", "manfaat": ["Bahan obat tradisional"], "cara_perawatan": "Siram 1x sehari, tanah gembur", "lokasi": {"lat": -7.6301, "lng": 111.5242}, "bagian_dipakai": "Rimpang"}');
+ 
+SELECT * FROM db_katalog_tanaman.katalog_tanaman;
