@@ -50,3 +50,17 @@ WHERE JSON_CONTAINS(detail->'$.manfaat', '"Menyerap CO2"');
 SELECT id_tanaman, nama_tanaman, detail->>'$.tinggi_m' AS tinggi_m
 FROM db_katalog_tanaman.katalog_tanaman
 WHERE JSON_CONTAINS_PATH(detail, 'one', '$.tinggi_m');
+
+-- 5. Perubahan atribut JSON: mengubah dan menambah atribut (JSON_SET)
+UPDATE db_katalog_tanaman.katalog_tanaman
+SET detail = JSON_SET(detail,
+      '$.kondisi', 'Terawat',
+      '$.terakhir_disiram', '2026-11-11')
+WHERE id_tanaman = 3;
+ 
+SELECT id_tanaman, nama_tanaman,
+       detail->>'$.kondisi'          AS kondisi,
+       detail->>'$.terakhir_disiram' AS terakhir_disiram
+FROM db_katalog_tanaman.katalog_tanaman
+WHERE id_tanaman = 3;
+
