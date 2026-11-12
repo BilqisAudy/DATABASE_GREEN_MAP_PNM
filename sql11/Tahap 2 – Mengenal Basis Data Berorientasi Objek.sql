@@ -1,3 +1,5 @@
+-- Modul 11 - Tahap 2: Implementasi Fitur DBMS (Tipe Data JSON)
+
 -- 1. Membuat database dan tabel katalog dengan kolom JSON
 CREATE DATABASE IF NOT EXISTS db_katalog_tanaman;
 USE db_katalog_tanaman;
