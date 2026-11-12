@@ -25,3 +25,28 @@ INSERT INTO katalog_tanaman (id_tanaman, nama_tanaman, jenis_tanaman, detail) VA
  '{"kondisi": "Terawat", "manfaat": ["Bahan obat tradisional"], "cara_perawatan": "Siram 1x sehari, tanah gembur", "lokasi": {"lat": -7.6301, "lng": 111.5242}, "bagian_dipakai": "Rimpang"}');
  
 SELECT * FROM db_katalog_tanaman.katalog_tanaman;
+
+-- 3. Pembacaan data JSON
+SELECT
+  nama_tanaman,
+  JSON_EXTRACT(detail, '$.kondisi') AS kondisi_extract,
+  detail->>'$.kondisi'              AS kondisi_teks,
+  detail->>'$.lokasi.lat'           AS latitude,
+  detail->>'$.manfaat[0]'           AS manfaat_pertama
+FROM db_katalog_tanaman.katalog_tanaman;
+ 
+-- 4. Pencarian data JSON
+-- 4a. Berdasarkan nilai atribut
+SELECT id_tanaman, nama_tanaman, detail->>'$.kondisi' AS kondisi
+FROM db_katalog_tanaman.katalog_tanaman
+WHERE detail->>'$.kondisi' = 'Perlu perawatan';
+ 
+-- 4b. Berdasarkan isi array
+SELECT id_tanaman, nama_tanaman
+FROM db_katalog_tanaman.katalog_tanaman
+WHERE JSON_CONTAINS(detail->'$.manfaat', '"Menyerap CO2"');
+ 
+-- 4c. Berdasarkan keberadaan atribut
+SELECT id_tanaman, nama_tanaman, detail->>'$.tinggi_m' AS tinggi_m
+FROM db_katalog_tanaman.katalog_tanaman
+WHERE JSON_CONTAINS_PATH(detail, 'one', '$.tinggi_m');
