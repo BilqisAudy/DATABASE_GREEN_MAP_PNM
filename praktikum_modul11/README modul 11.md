@@ -19,9 +19,12 @@ praktikum_modul11/
 │   ├── 04_pengujian_json.sql
 │   └── 05_pemodelan_objek.sql
 ├── dokumentasi/
-│   ├── perbandingan_dbms.pdf
-│   ├── analisis_objek.pdf
-│   └── lingkup_penerapan.pdf
+│   ├── Modul 11 Tahap 1.pdf
+│   ├── MODUL 11 Tahap 2.pdf
+│   ├── Modul 11 Tahap 3.pdf
+│   ├── Modul 11 Tahap 4.pdf
+│   ├── MODUL 11 Tahap 5.pdf
+│   └── DOKUMENTASI_MODUL11.pdf
 ├── diagram/
 │   └── pemodelan_objek.png
 └── README.md
@@ -37,14 +40,19 @@ DBMS: MySQL/MariaDB (Laragon), antarmuka phpMyAdmin. Jalankan file di folder `sq
 4. `04_pengujian_json.sql` – membaca, mengubah, menambah, menghapus, dan mencari atribut JSON
 5. `05_pemodelan_objek.sql` – memetakan objek Tanaman ke tabel `tanaman_objek` dan menggabungkannya dengan data relasional
 
-## Isi Dokumentasi
+## Dokumentasi
 
 | File | Isi |
 |------|-----|
-| `perbandingan_dbms.pdf` | Perbandingan DBMS dan pemilihan DBMS |
-| `analisis_objek.pdf` | Basis data berorientasi objek, JSON, dan implementasinya |
-| `lingkup_penerapan.pdf` | Lingkup penerapan basis data pada Green Map PNM |
+| `Modul 11 Tahap 1.pdf` | Perkembangan dan kelengkapan DBMS, perbandingan dan pemilihan DBMS |
+| `MODUL 11 Tahap 2.pdf` | Mengenal basis data berorientasi objek dan JSON |
+| `Modul 11 Tahap 3.pdf` | Implementasi basis data dengan fitur JSON |
+| `Modul 11 Tahap 4.pdf` | Pemodelan data berorientasi objek |
+| `MODUL 11 Tahap 5.pdf` | Analisis lingkup penerapan basis data |
+| `DOKUMENTASI_MODUL11.pdf` | Dokumentasi Modul 11 |
 
 ## Diagram
 
-`diagram/pemodelan_objek.png` – pemodelan objek Tanaman dan turunannya (Pohon, TanamanHias, TanamanObat).
+![Pemodelan objek Tanaman](diagram/pemodelan_objek.png)
+
+`diagram/pemodelan_objek.png` menunjukkan objek Tanaman dan turunannya (Pohon, TanamanHias, TanamanObat).
