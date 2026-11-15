@@ -16,6 +16,7 @@
 ```
 praktikum_modul11/
 ├── sql/
+│   ├── modul11.sql
 │   ├── 01_database.sql
 │   ├── 02_tabel.sql
 │   ├── 03_data_awal.sql
@@ -32,6 +33,7 @@ praktikum_modul11/
 
 | File | Database | Keterangan |
 |------|----------|------------|
+| `modul11.sql` | `praktikum_modul11` dan `db_green_map_pnm` | Script gabungan seluruh praktikum (Bagian A: Tahap 3 dan 4, Bagian B: post-test) |
 | `01_database.sql` | `praktikum_modul11` | Membuat database praktikum |
 | `02_tabel.sql` | `praktikum_modul11` | Membuat tabel `kategori` dan `tanaman` (kolom `atribut` bertipe JSON) |
 | `03_data_awal.sql` | `praktikum_modul11` | Mengisi kategori dan tiga tanaman dengan atribut JSON berbeda |
@@ -42,6 +44,10 @@ praktikum_modul11/
 ## Cara Menjalankan
 
 DBMS: MySQL/MariaDB (Laragon), antarmuka phpMyAdmin.
+
+Cara cepat: jalankan `sql/modul11.sql` lewat tab **SQL**. Script ini membuat ulang database `praktikum_modul11` setiap kali dijalankan. Bagian B (post-test) memakai database `db_green_map_pnm`, jadi jangan dijalankan ulang bila tabelnya sudah berisi data.
+
+Cara per tahap:
 
 1. Nyalakan Laragon, lalu buka phpMyAdmin.
 2. Buka tab **SQL** dan jalankan `01` sampai `05` berurutan. Pastikan database `praktikum_modul11` terpilih sebelum menjalankan `02` sampai `05`.

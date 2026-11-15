@@ -28,9 +28,8 @@
 
 | Isi | Lokasi |
 |-----|--------|
-| Script SQL Tahap 1 dan 2 | [`sql11`](sql11) |
-| Bukti eksekusi (screenshot) | [`screenshot11`](screenshot11) |
-| Script SQL Tahap 3 sampai post-test | [`praktikum_modul11/sql`](praktikum_modul11/sql) |
+| Script SQL gabungan | [`praktikum_modul11/sql/modul11.sql`](praktikum_modul11/sql/modul11.sql) |
+| Script SQL per tahap | [`praktikum_modul11/sql`](praktikum_modul11/sql) |
 | Laporan (PDF) | [`praktikum_modul11/dokumentasi`](praktikum_modul11/dokumentasi) |
 | Diagram pemodelan objek | [`praktikum_modul11/diagram`](praktikum_modul11/diagram) |
 
