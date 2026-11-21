@@ -40,8 +40,19 @@ praktikum_modul12/
 | `scripts/03_pengujian_dcl.sql` | 4 | Pengujian hak akses akun pelapor (baca diizinkan, hapus ditolak) dan rancangan DCL untuk Neo4j Enterprise. |
 | `scripts/04_rancangan_migrasi_pjbl.sql` | 5 | Rancangan query fitur peta digital, optimisasi (index, point index), dan rancangan RBAC. |
 | `dokumentasi/analisis_query_cost.pdf` | 3 | Perbandingan rencana eksekusi, estimasi query cost, dan inspeksi `EXPLAIN`/`PROFILE`. |
-| `dokumentasi/laporan_modul12.pdf` | 2 sampai 5 | Laporan praktikum lengkap. |
+| `dokumentasi/laporan_modul12.pdf` | 1 sampai 5 | Laporan praktikum lengkap. |
 | `diagram/query_tree.png` | 2 dan 3 | Query tree Rencana 1 (join dahulu) dan Rencana 2 (seleksi dahulu). |
+
+## Ringkasan Tahap
+
+| Tahap | Kegiatan | Hasil utama | Letak |
+|---|---|---|---|
+| 1 | Konsep dasar pemrosesan query, aljabar relasional, dan query tree | Instance Neo4j Aura (versi dan data Green Map), pemetaan σ, π, dan ⋈ ke Cypher, query tree dan `EXPLAIN`, serta pengujian parsing dan validasi | `dokumentasi/laporan_modul12.pdf` |
+| 2 | Migrasi data latihan ke DBMS target dan pemodelan query | Kasus transportasi (3 Route, 4 Trip) dan Green Map PNM (18 node, 18 relasi) berhasil dimigrasikan | `scripts/01`, `scripts/02`, `dokumentasi/laporan_modul12.pdf` |
+| 3 | Analisis query cost dan rencana eksekusi | Perbandingan join dahulu vs seleksi dahulu, estimasi page read, `EXPLAIN` dan `PROFILE` | `scripts/02`, `dokumentasi/analisis_query_cost.pdf`, `diagram/query_tree.png` |
+| 4 | Kontrol akses (DCL) dan prinsip least privilege | Akun pelapor (Viewer): baca berhasil, hapus ditolak, akses dicabut | `scripts/03`, `dokumentasi/laporan_modul12.pdf` |
+| 5 | Rancangan migrasi query dan kontrol akses proyek PjBL | Query fitur peta digital, optimisasi (index dan point index), dan rancangan RBAC | `scripts/04`, `dokumentasi/laporan_modul12.pdf` |
+| 6 | Dokumentasi di Git | Struktur folder `praktikum_modul12` pada repositori ini | Seluruh folder |
 
 ## Cara Menjalankan
 
